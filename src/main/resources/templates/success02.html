@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>条件判断测试</h1>
+<div>
+   <span th:if="${name=='张无忌'}">这是张无忌</span>
+    <br>
+    <span th:if="${teacher=='韦小宝'}">这是韦小宝</span>
+    <br>
+    <span th:if="${student=='杨过'}">这是杨过</span>
+    <hr>
+    <span th:if="${age>='16'}">已成年</span>
+</div>
+<div th:switch="${teacher}">
+    <p th:case="'韦小宝'">韦小宝</p>
+    <p th:case="'张无忌'">张无忌</p>
+    <p th:case="'杨过'">杨过</p>
+    <p th:case="*">金庸</p>
+</div>
+</body>
+</html>
